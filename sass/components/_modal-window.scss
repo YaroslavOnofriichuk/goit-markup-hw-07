@@ -1,0 +1,189 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 582px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    box-sizing: border-box;
+}    
+
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;  
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+    fill: var(--accent-color);
+}
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-name {
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.modal-form-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color)
+}
+
+.modal-form-input-container {
+    position: relative;
+    margin-top: 4px;
+}
+
+.modal-form-input {
+    width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 12px 12px 42px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+    }
+}
+
+.modal-form-input:focus + .modal-form-icon {
+    fill: var(--accent-color);
+}
+
+.modal-form-textarea {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    resize: none;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+    }
+}
+
+.modal-form-icon {
+    position: absolute;
+    left: 12px;
+    transform: translateY(50%);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-checkbox-label {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 400;
+    line-height: 1.71;
+    color: var(--secondary-text-color);
+}
+
+.modal-form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 3px;
+    vertical-align: text-top; 
+    transition-property: background-color, background-image;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-checkbox-link {
+    color: var(--accent-color);
+}
+
+.modal-form-checkbox:checked + .checkbox-icon {
+    background-color: var(--accent-color);
+    background-image: url("../images/icon-check.svg");
+    border-color: transparent;
+    background-size: contain;
+    background-origin: border-box;   
+}
+
+.modal-form-button {
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    margin: auto;
+    margin-top: 30px;
+    
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    cursor: pointer;
+}
